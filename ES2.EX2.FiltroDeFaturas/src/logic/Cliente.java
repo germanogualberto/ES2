@@ -29,4 +29,18 @@ public class Cliente {
 	public ArrayList<Fatura> getFaturas() {
 		return this.faturas;
 	}
+	
+	public void addFatura(Fatura fatura) {
+		faturas.add(fatura);
+	}
+	
+	public boolean deleteFatura(Fatura fatura){
+		for (int i = 0; i < faturas.size(); i++) {
+			if (faturas.get(i).equals(fatura)){
+				faturas.remove(0);
+				return true;
+			}
+		} 
+		return false;
+	}
 }

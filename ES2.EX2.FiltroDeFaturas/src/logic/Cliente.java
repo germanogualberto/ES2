@@ -13,6 +13,7 @@ public class Cliente {
 		this.nome=nome;
 		this.dataInclusao=dataInclusao;
 		this.estado = estado;
+		faturas = new ArrayList<Fatura>();
 	}
 	
 	public String getNome(){

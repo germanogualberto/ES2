@@ -4,13 +4,13 @@ import java.time.LocalDate;
 
 public class Fatura {
 
-	private String nomeCliente;
+	private Cliente cliente;
 	private int codigo;
 	private double valor;
 	private LocalDate date;
 	
-	public Fatura(String nomeCliente, int codigo,double valor, LocalDate date) {
-		this.nomeCliente = nomeCliente;
+	public Fatura(Cliente cliente, int codigo,double valor, LocalDate date) {
+		this.cliente = cliente;
 		this.codigo = codigo;
 		this.valor=valor;
 		this.date=date;
@@ -26,8 +26,12 @@ public class Fatura {
 		return false;
 	}
 
+	public Cliente getCliente() {
+		return cliente;
+	}
+	
 	public String getNomeCliente() {
-		return nomeCliente;
+		return cliente.getNome();
 	}
 	
 	public int getCodigo() {

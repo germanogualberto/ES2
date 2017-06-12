@@ -17,6 +17,8 @@ public class TestFatura {
 	Double val2;
 	LocalDate date1;
 	LocalDate date2;
+	Cliente c1;
+	Cliente c2;
 	
 	@Before
 	public void init(){
@@ -28,8 +30,11 @@ public class TestFatura {
 		val2=11.99;
 		date1 = LocalDate.of(2016, Month.JANUARY, 5);
 		date2 = LocalDate.of(2015, Month.JANUARY, 5);
-		f1=new Fatura(nome1,cod1,val1,date1);
-		f2=new Fatura(nome2,cod2,val2,date2);
+		c1=new Cliente(nome1,date1,ESTADO.SP);
+		c2=new Cliente(nome2,date1,ESTADO.SP);
+		f1=new Fatura(c1,cod1,val1,date1);
+		f2=new Fatura(c2,cod2,val2,date2);
+		
 		
 	}
 	

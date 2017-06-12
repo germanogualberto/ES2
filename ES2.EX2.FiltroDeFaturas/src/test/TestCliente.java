@@ -15,6 +15,10 @@ public class TestCliente {
 	Cliente c2 ;
 	Fatura f1;
 	Fatura f2;
+	int cod1;
+	int cod2;
+	double val1;
+	double val2;
 	
 	@Before
 	public void init(){
@@ -24,8 +28,10 @@ public class TestCliente {
 		date2 = LocalDate.of(2015, Month.JANUARY, 5);
 		c1 = new Cliente(nome1,date1,ESTADO.SP);
 		c2 = new Cliente(nome2,date2,ESTADO.PR);
-		f1 = new Fatura(nome1);
-		f2 = new Fatura(nome2);
+		cod1=1;
+		cod2=2;
+		f1 = new Fatura(nome1,cod1,val1,date1);
+		f2 = new Fatura(nome2,cod2,val2,date2);
 	}
 	
 	@Test
